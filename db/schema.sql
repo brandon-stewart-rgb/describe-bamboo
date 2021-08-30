@@ -1,24 +1,47 @@
-CREATE DATABASE employees_db;
+#CREATE DATABASE employees_db;
 
 USE employees_db;
 
+DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS department;
+
+
 CREATE TABLE department (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL
+    id INT AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    PRIMARY KEY (id)
 );
+
 
 CREATE TABLE role (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL NOT NULL,
-    department_id INT --to hold reference to department role belongs to ( department id? perhaps)
+    department_id INT, 
+    FOREIGN KEY (department_id) REFERENCES department(id),
+    PRIMARY KEY (id)
+);
+
+create table employee (
+    id INT not NULL auto_increment,
+    first_name VARCHAR(30) not NULL,
+    last_name VARCHAR(30) not NULL,
+    role_id INT NOT NULL,
+    manager_id INT NULL,
+    FOREIGN KEY (role_id) REFERENCES role(id),
+    PRIMARY KEY (id)
 );
 
 
-CREATE TABLE employee (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
-    role_id INT -- to hold reference to employee role
-    manager_id INT -- to to hold reference to another employee that is manager of the current employee. This field might be null if the employee has no manager.
-);
+
+
+
+
+
+
+SELECT * FROM employee;
+
+SELECT * FROM role;
+
+SELECT * FROM department;
