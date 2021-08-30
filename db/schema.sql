@@ -33,7 +33,7 @@ create table employee (
     PRIMARY KEY (id)
 );
 
-
+SELECT * FROM department;
 
 
 
