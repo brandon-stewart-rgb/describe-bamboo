@@ -1,5 +1,5 @@
-#CREATE DATABASE employees_db;
-
+DROP DATABASE IF EXISTS employees_db;
+CREATE DATABASE employees_db;
 USE employees_db;
 
 DROP TABLE IF EXISTS employee;
@@ -8,40 +8,31 @@ DROP TABLE IF EXISTS department;
 
 
 CREATE TABLE department (
-    id INT AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id)
+    dept_id INT AUTO_INCREMENT,
+    dept_name VARCHAR(30) NOT NULL,
+    PRIMARY KEY (dept_id)
 );
 
 
 CREATE TABLE role (
-    id INT AUTO_INCREMENT,
+    role_id INT AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL NOT NULL,
+    salary DEC(7,2) NOT NULL,
     department_id INT, 
-    FOREIGN KEY (department_id) REFERENCES department(id),
-    PRIMARY KEY (id)
+    FOREIGN KEY (department_id) REFERENCES department(dept_id),
+    PRIMARY KEY (role_id)
 );
 
 create table employee (
-    id INT not NULL auto_increment,
-    first_name VARCHAR(30) not NULL,
-    last_name VARCHAR(30) not NULL,
-    role_id INT NOT NULL,
-    manager_id INT NULL,
-    FOREIGN KEY (role_id) REFERENCES role(id),
-    PRIMARY KEY (id)
+    emp_id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    emp_role_id INT NOT NULL,
+    manager_id INT,
+    PRIMARY KEY (emp_id),
+    FOREIGN KEY (emp_role_id) REFERENCES role(role_id),
+    FOREIGN KEY (manager_id) REFERENCES employee(emp_id)
 );
-
-SELECT * FROM department;
-
-
-
-
-
 
 SELECT * FROM employee;
 
-SELECT * FROM role;
-
-SELECT * FROM department;

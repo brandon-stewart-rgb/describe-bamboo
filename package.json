@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "console-table-printer": "^2.10.0",
     "inquirer": "^8.1.2",
+    "inquirer-number-plus": "^1.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5"
   }
