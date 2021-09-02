@@ -21,6 +21,7 @@ VALUES
   ('Virginia', 'Woolf', 2,  NULL),
   ('Michael', 'Ondaatje', 3,  NULL),
   ('M.T.', 'Anderson', 3, 1),
+  ('Kristina Lyn', 'Heitkamp', 4, 2),
   ('William', 'Blake', 5, NULL),
   ('Edgar Allan', 'Poe', 6, 1 ),
   ('Leo', 'Tolstoy', 2, 1 ),

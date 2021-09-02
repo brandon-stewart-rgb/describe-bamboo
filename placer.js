@@ -92,17 +92,13 @@ exports.addAnEmployee = () => {
 
 
     view.viewAllEmployees(function (managerResults) {
-		
 		// pushing manager results into empty array
 		var managerResults = [];
 		for (var i = 0; i < managerResults.length; i++) {
 			managerResults.push(managerResults[i].title);
 		}
 		
-
-
-		var questions2 = [
-			
+		var questions2 = [	
 			{
 				type: 'list',
 				message: "Who is this employee's manager? ",
