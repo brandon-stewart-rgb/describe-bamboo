@@ -49,4 +49,4 @@ Have any questions about this project? </br>
 <a href="brandon@brandon.com">Email Me</a>
 
 # Screenshot
-![Screenshot](assests/img/ss.png)
+![Screenshot](assets/img/ss.png)
