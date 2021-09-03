@@ -6,7 +6,7 @@ A CLI used in conjunction with node, inquirer, and a mysql db to update and main
 
 ![License Badge](https://img.shields.io/static/v1?label=license&message=MIT+License&color=brightgreen&style=for-the-badge)
 <br />
-[Demo](https://drive.google.com/file/d/1xHhYsSifbOb68_elTleCt8xl9z5Xmrky/view)
+[Demo (view full screen)](https://drive.google.com/file/d/1xHhYsSifbOb68_elTleCt8xl9z5Xmrky/view)
 <br />
 
 # Table of Contents
