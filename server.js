@@ -6,6 +6,7 @@ var add = require('./lib/add');
 var update = require('./lib/update');
 var view = require('./lib/view');
 var tableView = require('./lib/tableViews');
+var chalk = require('chalk');
 
 // start server after db connection
 db.connect((err) => {
@@ -15,28 +16,12 @@ db.connect((err) => {
 
 const quit = () => {
 	db.end();
-	console.log(`
-	
-█─▄▄▄▄█─▄▄─█─▄▄─█▄─▄▄▀█▄─▄─▀█▄─█─▄█▄─▄▄─█░█░█
-█─██▄─█─██─█─██─██─██─██─▄─▀██▄─▄███─▄█▀█▄█▄█
-▀▄▄▄▄▄▀▄▄▄▄▀▄▄▄▄▀▄▄▄▄▀▀▄▄▄▄▀▀▀▄▄▄▀▀▄▄▄▄▄▀▄▀▄▀
-	
-	`);	
+	console.log(chalk.magenta('========'));
+	console.log(chalk.magenta('GOODBYE!'));
+	console.log(chalk.magenta('========'));
 };
 
 exports.init = () => {
-// 	console.log(`
-
-// ┏━━━┓╋╋╋╋╋┏┓╋╋╋╋╋╋╋╋╋╋╋╋╋╋┏━┓┏━┓
-// ┃┏━━┛╋╋╋╋╋┃┃╋╋╋╋╋╋╋╋╋╋╋╋╋╋┃┃┗┛┃┃
-// ┃┗━━┳┓┏┳━━┫┃┏━━┳┓╋┏┳━━┳━━┓┃┏┓┏┓┣━━┳━┓┏━━┳━━┳━━┳━┓
-// ┃┏━━┫┗┛┃┏┓┃┃┃┏┓┃┃╋┃┃┃━┫┃━┫┃┃┃┃┃┃┏┓┃┏┓┫┏┓┃┏┓┃┃━┫┏┛
-// ┃┗━━┫┃┃┃┗┛┃┗┫┗┛┃┗━┛┃┃━┫┃━┫┃┃┃┃┃┃┏┓┃┃┃┃┏┓┃┗┛┃┃━┫┃
-// ┗━━━┻┻┻┫┏━┻━┻━━┻━┓┏┻━━┻━━┛┗┛┗┛┗┻┛┗┻┛┗┻┛┗┻━┓┣━━┻┛
-// ╋╋╋╋╋╋╋┃┃╋╋╋╋╋╋┏━┛┃╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┏━┛┃
-// ╋╋╋╋╋╋╋┗┛╋╋╋╋╋╋┗━━┛╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┗━━┛
-
-// `);
 	inquirer
 		.prompt({
 			type: 'list',
@@ -57,14 +42,14 @@ exports.init = () => {
 		.then((answers) => {
 			var choices = answers;
 			var choices = {
-				'View all departments': tableView.tableViewDepartments,	
+				'View all departments': tableView.tableViewDepartments,
 				'View all roles': tableView.tableViewRoles,
-				'View all employees': tableView.tableViewEmployees,		
+				'View all employees': tableView.tableViewEmployees,
 				'Add a department': add.addADepartment,
 				'Add a role': add.addARole,
 				'Add an employee': add.addAnEmployee,
 				'Update an employee role': update.updateAnEmployeeRole,
-				'Quit': quit,
+				Quit: quit,
 			};
 			choices[answers.action]();
 		})
