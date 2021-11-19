@@ -11,20 +11,19 @@ A CLI used in conjunction with node, inquirer, and a mysql db to update and main
 
 
 ## Table of Contents
-***
 
 - [Installation](##installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-- [Screen Shot](#screenshot)
-- [Technologies Used](#technologiesUsed)
+- [Usage](##usage)
+- [License](##license)
+- [Contributing](##contributing)
+- [Tests](##tests)
+- [Questions](##questions)
+- [Screen Shot](##screenshot)
+- [Technologies Used](##technologies)
 
 ## Installation
 
-***
+
 A little intro about the installation. 
 ```
 $ git clone https://github.com/brandon-stewart-rgb/describe-bamboo.git
@@ -36,7 +35,7 @@ Clone, run npm install from your command line, set up db connection, run schema 
 
 
 ## Screenshot
-***
+
 ![Screenshot](assets/img/ss.png)
 
 ## Usage
@@ -57,7 +56,7 @@ No guidelines at this time.
 Test using command line.
 
   ## Technologies Used
-  ***
+  
   ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)  ![Chalk](https://img.shields.io/badge/Chalk-8B89CC?style=for-the-badge) ![MySQL](https://img.shields.io/badge/MySQL-4EA94B?style=for-the-badge) ![Inquirer](https://img.shields.io/badge/Inquirer-404D59?style=for-the-badge)   ![Github](https://img.shields.io/badge/Github-20232A?style=for-the-badge&logo=github&logoColor=61DAFB)     
 
   
