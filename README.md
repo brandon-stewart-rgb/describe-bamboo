@@ -55,7 +55,7 @@ No guidelines at this time.
 
 Test using command line.
 
-  ## Technologies Used
+  ## Technologies
   
   ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)  ![Chalk](https://img.shields.io/badge/Chalk-8B89CC?style=for-the-badge) ![MySQL](https://img.shields.io/badge/MySQL-4EA94B?style=for-the-badge) ![Inquirer](https://img.shields.io/badge/Inquirer-404D59?style=for-the-badge)   ![Github](https://img.shields.io/badge/Github-20232A?style=for-the-badge&logo=github&logoColor=61DAFB)     
 
