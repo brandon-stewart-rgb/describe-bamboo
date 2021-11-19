@@ -12,14 +12,14 @@ A CLI used in conjunction with node, inquirer, and a mysql db to update and main
 
 ## Table of Contents
 
-- [Installation](##installation)
-- [Usage](##usage)
-- [License](##license)
-- [Contributing](##contributing)
-- [Tests](##tests)
-- [Questions](##questions)
-- [Screen Shot](##screenshot)
-- [Technologies Used](##technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [Screen Shot](#screenshot)
+- [Technologies Used](#technologies)
 
 ## Installation
 
